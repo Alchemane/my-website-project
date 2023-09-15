@@ -33,6 +33,15 @@ body {
   }
 }
 
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translate(200px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(200px) rotate(-360deg);
+  }
+}
+
 #profile-pic {
   position: absolute;
   top: 50%;
@@ -50,6 +59,7 @@ body {
 #discord-icon {
   top: 0%;
   left: 50%;
+  animation: orbit 20s infinite linear;
 }
 
 #steam-icon {

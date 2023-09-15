@@ -1,10 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const numberOfIcons = 11; // Total number of social icons
-    const radius = 200; // Radius in pixels
+    const numberOfIcons = 11;
+    const radius = 200;
     const angleStep = 360 / numberOfIcons;
-    const centerWrapper = document.getElementById("center-wrapper");
   
-    // Array of social icon IDs
     const iconIds = [
       "discord-icon", "steam-icon", "instagram-icon", "reddit-icon",
       "twitter-icon", "github-icon", "youtube-icon", "anime-planet-icon",
@@ -20,5 +18,8 @@ document.addEventListener("DOMContentLoaded", function() {
       // Set the position of each icon
       icon.style.left = `calc(50% + ${x}px)`;
       icon.style.top = `calc(50% + ${y}px)`;
+  
+      // Set the initial rotation for each icon
+      icon.style.transform = `rotate(${angle}deg) translate(${radius}px) rotate(-${angle}deg)`;
     });
   });
