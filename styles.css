@@ -17,6 +17,8 @@ body {
 /* Center wrapper */
 #center-wrapper {
   position: absolute;
+  width: 400px;
+  height: 400px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -42,7 +44,7 @@ body {
 /* Social icons */
 .social-icon {
   position: absolute;
-  /* The transform property will be used for the orbit animation */
+  animation: hoverEffect 3s infinite ease-in-out;
 }
 
 #discord-icon {
