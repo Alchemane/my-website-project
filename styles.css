@@ -8,20 +8,18 @@ body {
 /* Background section */
 #background-section {
   background-image: url('h0bT8.jpeg');
-  background-size: cover;
+  background-size: auto;
   background-position: center;
   background-repeat: no-repeat;
-  padding-bottom: calc(1029 / 1456 * 100%);
-  height: 0;
+  height: 1029px;
 }
 
 #profile-pic {
   position: absolute;
-  top: 50%;
+  bottom: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 20vw;  /* 10% of the viewport width */
-  height: auto;  /* maintain aspect ratio */
+  transform: translateX(-50%);
+  
   /* Add hover animation here */
 }
 
