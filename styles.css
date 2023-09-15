@@ -14,14 +14,24 @@ body {
   height: 1029px;
 }
 
+@keyframes hoverEffect {
+  0%, 100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -20px);
+  }
+}
+
 #profile-pic {
   position: absolute;
-  bottom: 0;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  
+  transform: translate(-50%, 0);
+  animation: hoverEffect 2s infinite ease-in-out;
   /* Add hover animation here */
 }
+
 
 /* Other styles */
 header, nav, main, footer {
