@@ -32,6 +32,15 @@ body {
   /* Add hover animation here */
 }
 
+#soundcloud-icon {
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, 0);
+  animation: hoverEffect 3s infinite ease-in-out;
+  /* Add hover animation here */
+}
+
 
 /* Other styles */
 header, nav, main, footer {
