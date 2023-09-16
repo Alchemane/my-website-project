@@ -47,13 +47,14 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /*animation: hoverEffect 3s infinite ease-in-out;*/
+  animation: hoverEffect 3s infinite ease-in-out;
 }
 
 /* Social icons */
 .social-icon {
-  position: absolute;
   transform-origin: center;
+  position: absolute;
+  
 }
 
 #discord-icon {

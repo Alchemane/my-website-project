@@ -14,10 +14,9 @@ document.addEventListener("DOMContentLoaded", function() {
         const angle = angleStep * i;
         const x = radius * Math.cos(angle * (Math.PI / 180));
         const y = radius * Math.sin(angle * (Math.PI / 180));
-
+        
         icon.style.left = `calc(50% + ${x}px)`;
         icon.style.top = `calc(50% + ${y}px)`;
         icon.style.transform = `rotate(${angle}deg) translate(${radius}px) rotate(-${angle}deg)`;
-        
     });
 });
