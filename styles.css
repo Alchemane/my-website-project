@@ -65,6 +65,7 @@ body {
 #steam-icon {
   top: 50%;
   left: 0%;
+  animation: orbit 20s infinite linear;
 }
 
 #instagram-icon {
