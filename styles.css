@@ -47,25 +47,24 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: hoverEffect 3s infinite ease-in-out;
+  /*animation: hoverEffect 3s infinite ease-in-out;*/
 }
 
 /* Social icons */
 .social-icon {
   position: absolute;
-  animation: hoverEffect 3s infinite ease-in-out;
+  transform-origin: center;
 }
 
 #discord-icon {
-  top: 0%;
+  top: 100%;
   left: 50%;
   animation: orbit 20s infinite linear;
 }
 
 #steam-icon {
-  top: 50%;
-  left: 0%;
-  animation: orbit 20s infinite linear;
+  top: 100%;
+  left: 50%;
 }
 
 #instagram-icon {
