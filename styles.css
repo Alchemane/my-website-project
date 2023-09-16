@@ -52,65 +52,14 @@ body {
 
 /* Social icons */
 .social-icon {
-  transform-origin: center;
+  top: 50%;
+  left: 50%;
   position: absolute;
-  
+  animation: hoverEffect 3s infinite ease-in-out;
 }
 
 #discord-icon {
-  top: 100%;
-  left: 50%;
   animation: orbit 20s infinite linear;
-}
-
-#steam-icon {
-  top: 100%;
-  left: 50%;
-}
-
-#instagram-icon {
-  top: 100%;
-  left: 50%;
-}
-
-#reddit-icon {
-  top: 50%;
-  left: 100%;
-}
-
-#twitter-icon {
-  top: 0%;
-  left: 25%;
-}
-
-#github-icon {
-  top: 25%;
-  left: 0%;
-}
-
-#youtube-icon {
-  top: 100%;
-  left: 25%;
-}
-
-#anime-planet-icon {
-  top: 25%;
-  left: 100%;
-}
-
-#tiktok-icon {
-  top: 0%;
-  left: 75%;
-}
-
-#spotify-icon {
-  top: 75%;
-  left: 100%;
-}
-
-#soundcloud-icon {
-  top: 100%;
-  left: 75%;
 }
 
 /* Other styles */
