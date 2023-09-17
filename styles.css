@@ -47,19 +47,15 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: hoverEffect 3s infinite ease-in-out;
+  /*animation: hoverEffect 3s infinite ease-in-out;*/
 }
 
 /* Social icons */
 .social-icon {
+  position: absolute;
   top: 50%;
   left: 50%;
-  position: absolute;
-  animation: hoverEffect 3s infinite ease-in-out;
-}
-
-#soundcloud-icon {
-  animation: orbit 2s infinite linear;
+  /*animation: orbit 2s infinite linear;*/
 }
 
 /* Other styles */
