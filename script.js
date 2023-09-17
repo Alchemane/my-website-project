@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const numberOfIcons = 1;
-    const radius = 200;
+    const radius = 100;
     const angleStep = 360 / numberOfIcons;
 
     const iconIds = [
@@ -17,9 +17,16 @@ document.addEventListener("DOMContentLoaded", function() {
         const angle = angleStep * i;
         const x = radius * Math.cos(angle * (Math.PI / 180));
         const y = radius * Math.sin(angle * (Math.PI / 180));
-
-        icon.style.transformOrigin = `${centerX}px ${centerY}px`;
-        
+    
+        // Get the dimensions of the icon
+        const iconWidth = icon.offsetWidth;
+        const iconHeight = icon.offsetHeight;
+    
+        // Adjust the transform-origin
+        const adjustedCenterX = centerX - iconWidth / 2;
+        const adjustedCenterY = centerY - iconHeight / 2;
+        icon.style.transformOrigin = `${adjustedCenterX}px ${adjustedCenterY}px`;
+    
         icon.style.left = `calc(50% + ${x}px)`;
         icon.style.top = `calc(50% + ${y}px)`;
         icon.style.transform = `rotate(${angle}deg) translate(${radius}px) rotate(-${angle}deg)`;
