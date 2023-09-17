@@ -58,8 +58,8 @@ body {
   animation: hoverEffect 3s infinite ease-in-out;
 }
 
-#discord-icon {
-  animation: orbit 20s infinite linear;
+#soundcloud-icon {
+  animation: orbit 2s infinite linear;
 }
 
 /* Other styles */

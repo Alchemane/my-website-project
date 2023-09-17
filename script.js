@@ -1,12 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const numberOfIcons = 11;
+    const numberOfIcons = 1;
     const radius = 200;
     const angleStep = 360 / numberOfIcons;
 
     const iconIds = [
-        "discord-icon", "steam-icon", "instagram-icon", "reddit-icon",
-        "twitter-icon", "github-icon", "youtube-icon", "anime-planet-icon",
-        "tiktok-icon", "spotify-icon", "soundcloud-icon"
+        "soundcloud-icon"
     ];
     
     iconIds.forEach((id, i) => {
