@@ -17,8 +17,6 @@ body {
 /* Center wrapper */
 #center-wrapper {
   position: absolute;
-  width: 400px;
-  height: 400px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -47,7 +45,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /*animation: hoverEffect 3s infinite ease-in-out;*/
+  /* animation: hoverEffect 3s infinite ease-in-out; */
 }
 
 /* Social icons */
