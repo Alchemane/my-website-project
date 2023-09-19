@@ -53,7 +53,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  /* animation: orbit 1s infinite linear; */
+  animation: orbit 5s infinite linear;
 }
 
 /* Other styles */

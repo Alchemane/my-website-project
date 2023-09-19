@@ -1,10 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const numberOfIcons = 1;
-    const radius = 0;
+    const numberOfIcons = 11;
+    const radius = 50;
     const angleStep = 360 / numberOfIcons;
 
     const iconIds = [
-        "soundcloud-icon"
+        "discord-icon", "steam-icon", "instagram-icon", "reddit-icon",
+        "twitter-icon", "github-icon", "youtube-icon", "anime-planet-icon",
+        "tiktok-icon", "spotify-icon", "soundcloud-icon"
     ];
 
     const profilePicture = document.getElementById('profile-pic');
@@ -27,14 +29,9 @@ document.addEventListener("DOMContentLoaded", function() {
         const adjustedCenterX = centerX - iconWidth / 2;
         const adjustedCenterY = centerY - iconHeight / 2;
         icon.style.transformOrigin = `${adjustedCenterX}px ${adjustedCenterY}px`;
-        console.log("Set transform-origin:", icon.style.transformOrigin);
-        void icon.offsetHeight;
 
         icon.style.left = `calc(50% + ${x}px)`;
         icon.style.top = `calc(50% + ${y}px)`;
         icon.style.transform = `rotate(${angle}deg) translate(${radius}px) rotate(-${angle}deg)`;
-        console.log("Center of profile picture:", centerX, centerY);
-        console.log("Icon dimensions:", iconWidth, iconHeight);
-        console.log("Adjusted transform-origin:", adjustedCenterX, adjustedCenterY);
     });
 });
