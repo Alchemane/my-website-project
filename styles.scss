@@ -13,7 +13,7 @@ body {
 }
 
 #background-section {
-    background-image: url('/elements/BLAME!+By+Tsutomu+Nihei1.jpg');
+    background-image: url('elements/BLAME!+By+Tsutomu+Nihei1.jpg');
     background-size: auto;
     background-position: top;
     background-repeat: no-repeat;
@@ -26,6 +26,11 @@ body {
     font-size: 1.4em;
     text-align: center;
     display: block;
+    transition: filter 0.3s ease;
+
+    &:hover {
+      filter: brightness(0.7);
+    }
   }
   
   .orbit-wrap {
@@ -40,8 +45,15 @@ body {
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      
+
+      &:hover {
+        ul {
+          border-width: 2px;
+          border-color: #fff;
+        }
+      }
     }
+    
   }
   
   ul[class^=ring] {
@@ -58,15 +70,15 @@ body {
       $deg: 360deg / $numItems;
       
       .ring-#{$numRing} > *:nth-of-type(#{$s}) {
-        transform: rotate($s * $deg) translate(12.5em - ($numRing * 2.5)) rotate(-$s * $deg);
+        transform: rotate($s * $deg) translate(15em - ($numRing * 4)) rotate(-$s * $deg);
       }
     }
   }
   
   @for $i from 0 through $lastRing {  
     .ring-#{$i} {
-      width: 25em - ($i * 5);
-      height: 25em - ($i * 5);
+      width: 30em - ($i * 8);
+      height: 30em - ($i * 8);
       animation: clockwiseRotate 35s - ($i * 5) linear infinite;
       
       img {
@@ -79,7 +91,7 @@ body {
   
   
   %ring {
-    border: solid 1px #0055ff;
+    border: solid 1px #bfbfbf;
     position: relative;
     padding: 0;
     border-radius: 50%;

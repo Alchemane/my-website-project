@@ -9,7 +9,7 @@ body {
 }
 
 #background-section {
-  background-image: url("elements/h0bT8.jpeg");
+  background-image: url("elements/BLAME!+By+Tsutomu+Nihei1.jpg");
   background-size: auto;
   background-position: top;
   background-repeat: no-repeat;
@@ -22,6 +22,10 @@ body {
   font-size: 1.4em;
   text-align: center;
   display: block;
+  transition: filter 0.3s ease;
+}
+.orbit-icon:hover {
+  filter: brightness(0.7);
 }
 
 .orbit-wrap {
@@ -37,6 +41,10 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
 }
+.orbit-wrap > li:hover ul {
+  border-width: 2px;
+  border-color: #fff;
+}
 
 ul[class^=ring] {
   transition: all 300ms ease-in-out;
@@ -46,8 +54,8 @@ ul[class^=ring] li {
 }
 
 .ring-0 {
-  width: 25em;
-  height: 25em;
+  width: 30em;
+  height: 30em;
   animation: clockwiseRotate 35s linear infinite;
 }
 .ring-0 img {
@@ -55,36 +63,36 @@ ul[class^=ring] li {
 }
 
 .ring-0 > *:nth-of-type(1) {
-  transform: rotate(51.4285714286deg) translate(12.5em) rotate(-51.4285714286deg);
+  transform: rotate(51.4285714286deg) translate(15em) rotate(-51.4285714286deg);
 }
 
 .ring-0 > *:nth-of-type(2) {
-  transform: rotate(102.8571428571deg) translate(12.5em) rotate(-102.8571428571deg);
+  transform: rotate(102.8571428571deg) translate(15em) rotate(-102.8571428571deg);
 }
 
 .ring-0 > *:nth-of-type(3) {
-  transform: rotate(154.2857142857deg) translate(12.5em) rotate(-154.2857142857deg);
+  transform: rotate(154.2857142857deg) translate(15em) rotate(-154.2857142857deg);
 }
 
 .ring-0 > *:nth-of-type(4) {
-  transform: rotate(205.7142857143deg) translate(12.5em) rotate(-205.7142857143deg);
+  transform: rotate(205.7142857143deg) translate(15em) rotate(-205.7142857143deg);
 }
 
 .ring-0 > *:nth-of-type(5) {
-  transform: rotate(257.1428571429deg) translate(12.5em) rotate(-257.1428571429deg);
+  transform: rotate(257.1428571429deg) translate(15em) rotate(-257.1428571429deg);
 }
 
 .ring-0 > *:nth-of-type(6) {
-  transform: rotate(308.5714285714deg) translate(12.5em) rotate(-308.5714285714deg);
+  transform: rotate(308.5714285714deg) translate(15em) rotate(-308.5714285714deg);
 }
 
 .ring-0 > *:nth-of-type(7) {
-  transform: rotate(360deg) translate(12.5em) rotate(-360deg);
+  transform: rotate(360deg) translate(15em) rotate(-360deg);
 }
 
 .ring-1 {
-  width: 20em;
-  height: 20em;
+  width: 22em;
+  height: 22em;
   animation: clockwiseRotate 30s linear infinite;
 }
 .ring-1 img {
@@ -92,23 +100,23 @@ ul[class^=ring] li {
 }
 
 .ring-1 > *:nth-of-type(1) {
-  transform: rotate(90deg) translate(10em) rotate(-90deg);
+  transform: rotate(90deg) translate(11em) rotate(-90deg);
 }
 
 .ring-1 > *:nth-of-type(2) {
-  transform: rotate(180deg) translate(10em) rotate(-180deg);
+  transform: rotate(180deg) translate(11em) rotate(-180deg);
 }
 
 .ring-1 > *:nth-of-type(3) {
-  transform: rotate(270deg) translate(10em) rotate(-270deg);
+  transform: rotate(270deg) translate(11em) rotate(-270deg);
 }
 
 .ring-1 > *:nth-of-type(4) {
-  transform: rotate(360deg) translate(10em) rotate(-360deg);
+  transform: rotate(360deg) translate(11em) rotate(-360deg);
 }
 
 ul[class^=ring] {
-  border: solid 1px #e066ff;
+  border: solid 1px #bfbfbf;
   position: relative;
   padding: 0;
   border-radius: 50%;
@@ -126,9 +134,6 @@ ul[class^=ring] li {
   margin: -0.8em;
 }
 
-/*
-  center;
-*/
 .orbit-center {
   z-index: 5;
   text-align: center;
@@ -146,9 +151,6 @@ ul[class^=ring] li {
   transition: all 300ms ease-in-out;
 }
 
-/* 
-animations 
-*/
 @keyframes clockwiseRotate {
   from {
     transform: rotate(0deg);
