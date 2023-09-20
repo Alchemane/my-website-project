@@ -1,0 +1,73 @@
+// Define variables
+$orbitItemSize: 1.6em;
+$ringMap: (ring-1: 2, ring-2: 8, ring-3: 8);
+
+// Global styles
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0d0d0d;
+  color: #fff;
+}
+
+// Orbit styles
+.orbit-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  
+  .orbit-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // Add your profile picture styles here
+  }
+  
+  ul[class^=ring] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    
+    li {
+      position: absolute;
+      // Add your icon styles here
+    }
+  }
+}
+
+// Keyframes for orbit animation
+@keyframes orbit {
+    0% {
+      transform: rotate(0deg) translate(0) rotate(0deg);
+    }
+    100% {
+      transform: rotate(1turn) translate(0) rotate(-1turn);
+    }
+  }
+  
+  // Mixin for generating orbit items
+  @mixin orbit-item($numItems, $ringName) {
+    @for $i from 1 through $numItems {
+      $angle: 360deg / $numItems * $i;
+      &:nth-child(#{$i}) {
+        transform: rotate($angle) translate(100px) rotate(-$angle);
+      }
+    }
+  }
+  
+  // Apply styles to rings and their items
+  @each $ring, $numItems in $ringMap {
+    .#{$ring} {
+      li {
+        @include orbit-item($numItems, $ring);
+        animation: orbit 10s infinite linear;
+      }
+    }
+  }

@@ -2,25 +2,44 @@
 <html>
   <head>
     <title>The Netsphere</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- This will be the compiled CSS -->
   </head>
   <body> 
     <div id="background-section">
       <div id="center-wrapper">
-        <img id="profile-pic" src="elements\Aokana_EXP2_GIMP.png" alt="Profile Picture">
-          <div id="icon-wrapper">
-            <img class="social-icon" id="soundcloud-icon" src="icons\soundcloud-3-32.png" alt="Soundcloud Icon">
-            <img class="social-icon" id="github-icon" src="icons\github-8-32.png" alt="GitHub Icon">
-            <img class="social-icon" id="instagram-icon" src="icons\instagram-3-32.png" alt="Instagram Icon">
-            <img class="social-icon" id="anime-planet-icon" src="icons\planet-32.png" alt="Anime Planet Icon">
-            <img class="social-icon" id="reddit-icon" src="icons\reddit-2-32.png" alt="Reddit Icon">
-            <img class="social-icon" id="discord-icon" src="icons\discord-32.png" alt="Discord Icon">
-            <img class="social-icon" id="steam-icon" src="icons\steam-32.png" alt="Steam Icon">
-            <img class="social-icon" id="spotify-icon" src="icons\spotify-32.png" alt="Spotify Icon">
-            <img class="social-icon" id="twitter-icon" src="icons\twitter-3-32.png" alt="Twitter Icon">
-            <img class="social-icon" id="youtube-icon" src="icons\youtube-3-32.png" alt="YouTube Icon">
-            <img class="social-icon" id="tiktok-icon" src="icons\tiktok-2-32.png" alt="TikTok Icon">
-          </div>
+        <div class="orbit">
+          <ul class="orbit-wrap">
+            <li class="orbit-center">
+              <img id="profile-pic" src="elements/Aokana_EXP2_GIMP.png" alt="Profile Picture">
+            </li>
+            <li>
+              <ul class="ring-0">
+                <!--electron shell 1-->
+                <li><img class="orbit-icon" id="soundcloud-icon" src="icons/soundcloud-3-32.png" alt="Soundcloud Icon"></li>
+                <li><img class="orbit-icon" id="discord-icon" src="icons/discord-32.png" alt="Discord Icon"></li>
+              </ul>
+            </li>
+            <li>
+              <ul class="ring-1">
+                <!--electron shell 2-->
+                <li><img class="orbit-icon" id="steam-icon" src="icons/steam-32.png" alt="Steam Icon"></li>
+                <li><img class="orbit-icon" id="instagram-icon" src="icons/instagram-3-32.png" alt="Instagram Icon"></li>
+                <li><img class="orbit-icon" id="anime-planet-icon" src="icons/planet-32.png" alt="Anime-Planet Icon"></li>
+                <li><img class="orbit-icon" id="twitter-icon" src="icons/twitter-3-32.png" alt="Twitter Icon"></li>
+                <li><img class="orbit-icon" id="github-icon" src="icons/github-8-32.png" alt="GitHub Icon"></li>
+                <li><img class="orbit-icon" id="reddit-icon" src="icons/reddit-2-32.png" alt="Reddit Icon"></li>
+                <li><img class="orbit-icon" id="youtube-icon" src="icons/youtube-3-32.png" alt="YouTube Icon"></li>
+                <li><img class="orbit-icon" id="tiktok-icon" src="icons/tiktok-2-32.png" alt="TikTok Icon"></li>
+              </ul>
+            </li>
+            <li>
+              <ul class="ring-2">
+                <!--electron shell 3-->
+                <li><img class="orbit-icon" id="spotify-icon" src="icons/spotify-32.png" alt="Spotify Icon"></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <footer>
