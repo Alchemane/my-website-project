@@ -9,33 +9,25 @@ body {
 }
 
 #background-section {
-  background-image: url("/elements/h0bT8.jpeg");
-  background-size: cover;
-  background-position: center;
+  background-image: url("elements/h0bT8.jpeg");
+  background-size: auto;
+  background-position: top;
   background-repeat: no-repeat;
-  min-height: 1029px;
-}
-
-.orbit {
-  float: left;
-  width: 100%;
-  min-width: 100%;
-  min-height: 100%;
 }
 
 .orbit-icon {
   width: 1.6em;
   height: 1.6em;
   line-height: 1.6em;
-  font-size: 1.2em;
+  font-size: 1.4em;
   text-align: center;
   display: block;
 }
 
 .orbit-wrap {
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  width: calc(100vw - 30px);
+  height: calc(100vh - 30px);
   list-style: none;
   animation: hoverEffect 5s infinite ease-in-out;
 }
