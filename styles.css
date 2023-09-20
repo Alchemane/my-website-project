@@ -33,13 +33,10 @@ body {
 }
 
 .orbit-wrap {
-  height: 40em;
-  list-style: none;
-  font-size: 1.3em;
   position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  list-style: none;
   animation: hoverEffect 5s infinite ease-in-out;
 }
 .orbit-wrap > li {
@@ -178,9 +175,9 @@ animations
 }
 @keyframes hoverEffect {
   0%, 100% {
-    transform: translate(-50%, -50%) translateY(0);
+    transform: translateY(0%);
   }
   50% {
-    transform: translate(-50%, -50%) translateY(-20px);
+    transform: translateY(-20px);
   }
 }/*# sourceMappingURL=styles.css.map */
