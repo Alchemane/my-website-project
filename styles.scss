@@ -1,9 +1,7 @@
-// Define variables
 $orbitItemSize: 1.6em;
 $ringMap: (ring-0: 7, ring-1: 4);
 $lastRing: 1;
 
-// Global styles
 * {
   box-sizing: border-box;
 }
@@ -15,7 +13,7 @@ body {
 }
 
 #background-section {
-    background-image: url('elements/h0bT8.jpeg');
+    background-image: url('/elements/BLAME!+By+Tsutomu+Nihei1.jpg');
     background-size: auto;
     background-position: top;
     background-repeat: no-repeat;
@@ -57,7 +55,6 @@ body {
   
   @mixin orbit-item($numItems, $numRing) {
     @for $s from 1 through $numItems {  
-      // Spread items over the ring
       $deg: 360deg / $numItems;
       
       .ring-#{$numRing} > *:nth-of-type(#{$s}) {
@@ -66,10 +63,8 @@ body {
     }
   }
   
-  // Render rings
   @for $i from 0 through $lastRing {  
     .ring-#{$i} {
-      // decrease each ring in size
       width: 25em - ($i * 5);
       height: 25em - ($i * 5);
       animation: clockwiseRotate 35s - ($i * 5) linear infinite;
@@ -84,7 +79,7 @@ body {
   
   
   %ring {
-    border: solid 1px #e066ff;
+    border: solid 1px #0055ff;
     position: relative;
     padding: 0;
     border-radius: 50%;
@@ -101,10 +96,7 @@ body {
     height: $orbitItemSize;
     margin: -$orbitItemSize / 2;
   }
-  
-  /*
-    center;
-  */
+
   .orbit-center {
     z-index: 5;
     text-align: center;
@@ -123,10 +115,6 @@ body {
     transition: all 300ms ease-in-out;
   }
   
-  
-/* 
-animations 
-*/
 @keyframes clockwiseRotate {
     from {
         transform: rotate(0deg)
