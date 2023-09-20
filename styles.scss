@@ -16,11 +16,11 @@ body {
 
 #background-section {
     background-image: url('/elements/h0bT8.jpeg');
-    background-size: auto;
+    background-size: cover;  // Cover the entire container
     background-position: center;
     background-repeat: no-repeat;
-    height: 1029px;
-}
+    min-height: 1029px;  // Minimum height
+  }
 
 // Parent container
 .orbit {
@@ -159,6 +159,6 @@ animations
       transform: translateY(0%);
     }
     50% {
-      transform: translateY(-20px);
+      transform: translateY(-30px);
     }
   }
