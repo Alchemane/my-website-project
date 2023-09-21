@@ -12,11 +12,34 @@ body {
   color: #fff;
 }
 
+@font-face {
+  font-family: 'refrigerator-deluxe';
+  src: url('fonts/Refrigerator Deluxe.otf') format('truetype');
+}
+
 #background-section {
-    background-image: url('elements/BLAME!+By+Tsutomu+Nihei1.jpg');
-    background-size: auto;
-    background-position: top;
+    background-image: url('elements/169383.jpg');
+    background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+#webpage-title {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 5em;
+  color: white;
+  font-family: 'refrigerator-deluxe', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  line-height: 1.1em;
+  font-weight: 700;
+  font-style: normal;
 }
   
   .orbit-icon {
@@ -48,7 +71,7 @@ body {
 
       &:hover {
         ul {
-          border-width: 2px;
+          border-width: 3px;
           border-color: #fff;
         }
       }
@@ -91,7 +114,7 @@ body {
   
   
   %ring {
-    border: solid 1px #bfbfbf;
+    border: solid 2px #cc66ff;
     position: relative;
     padding: 0;
     border-radius: 50%;
