@@ -24,7 +24,7 @@ html, body {
   z-index: 100;
 }
 
-#background-section {
+#main-social-section {
   background-image: url("elements/169383.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -34,17 +34,39 @@ html, body {
   position: relative;
 }
 
-#about-me-section {
+#about-section {
+  position: relative;
   width: 100vw;
   height: 100vh;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+.nav-buttons .nav-link {
+  font-family: "refrigerator-deluxe", sans-serif;
+  font-size: 2.5em;
+  color: #fff;
+  top: 10%;
+  margin: 0 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-style: normal;
+  font-weight: 400;
+  cursor: pointer;
+}
+.nav-buttons .nav-link:hover {
+  text-decoration: underline;
 }
 
 #about-title {
   position: absolute;
   top: 10%;
   left: 50%;
-  transform: translate(-100%, 0);
-  font-size: 5em;
+  transform: translateX(-50%);
+  font-size: 3em;
   color: white;
   font-family: "refrigerator-deluxe", sans-serif;
   text-transform: uppercase;

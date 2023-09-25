@@ -7,10 +7,10 @@
   <body> 
     <!-- Navigation Buttons -->
     <div class="nav-buttons">
-      <button onclick="scrollToSection('background-section')">Social</button>
-      <button onclick="scrollToSection('about-me-section')">About</button>
+      <a href="#" class="nav-link" data-section="main-social-section">Social</a>
+      <a href="#" class="nav-link" data-section="about-section">About</a>
     </div>
-    <div id="background-section">
+    <div id="main-social-section">
       <div id="webpage-title">Welcome to the Netsphere</div>
       <ul class="orbit-wrap">
         <li class="orbit-center">
@@ -81,9 +81,9 @@
         </li>
       </ul>
     </div>
-    <about-me-section>
+    <section id="about-section">
       <div id="about-title">About Me</div>
-    </about-me-section>
+    </section>
     
     <footer>
       <p>© 2023 Safeguard</p>
