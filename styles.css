@@ -8,6 +8,11 @@ body {
   color: #fff;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 @font-face {
   font-family: "refrigerator-deluxe";
   src: url("fonts/Refrigerator Deluxe.otf") format("truetype");
@@ -51,8 +56,9 @@ body {
 }
 
 .orbit-wrap {
+  margin: 0;
   position: relative;
-  width: calc(100vw - 30px);
+  width: 100vw;
   height: calc(100vh - 30px);
   list-style: none;
   animation: hoverEffect 5s infinite ease-in-out;
