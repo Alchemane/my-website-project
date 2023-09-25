@@ -22,6 +22,13 @@ html, body {
   src: url('fonts/Refrigerator Deluxe.otf') format('truetype');
 }
 
+.nav-buttons {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
 #background-section {
     background-image: url('elements/169383.jpg');
     background-position: center;
@@ -30,6 +37,26 @@ html, body {
     width: 100vw;
     height: 100vh;
     position: relative;
+}
+
+#about-me-section {
+  width: 100vw;
+  height: 100vh;
+}
+
+#about-title {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-100%, 0);
+  font-size: 5em;
+  color: white;
+  font-family: 'refrigerator-deluxe', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  line-height: 1.1em;
+  font-weight: 700;
+  font-style: normal;
 }
 
 #webpage-title {
