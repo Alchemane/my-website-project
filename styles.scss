@@ -22,32 +22,39 @@ html, body {
   src: url('fonts/Refrigerator Deluxe.otf') format('truetype');
 }
 
-.nav-buttons {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-}
-
-#main-social-section {
-    background-image: url('elements/169383.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-}
-
-#about-section {
-  position: relative;
-  width: 100vw;
+//home section
+#home-section {
+  background-image: url('elements/169383.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: calc(100vw - 5px);
   height: 100vh;
+  position: relative;
+}
+
+#home-title {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 5em;
+  color: white;
+  font-family: 'refrigerator-deluxe', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  line-height: 1.1em;
+  font-weight: 700;
+  font-style: normal;
 }
 
 .nav-buttons {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
   display: flex;
-  justify-content: flex-end; // Aligns the buttons to the right
+  justify-content: flex-end;
 
   .nav-link {
     font-family: 'refrigerator-deluxe', sans-serif;
@@ -59,13 +66,149 @@ html, body {
     text-transform: uppercase;
     letter-spacing: .1em;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     cursor: pointer;
 
     &:hover {
-      text-decoration: underline;
+      color: #cc66ff;
     }
   }
+}
+
+//social section
+#social-section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+#social-title {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3em;
+  color: white;
+  font-family: 'refrigerator-deluxe', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  line-height: 1.1em;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.orbit-icon {
+  width: $orbitItemSize;
+  height: $orbitItemSize;
+  line-height: $orbitItemSize;
+  font-size: 1.4em;
+  text-align: center;
+  display: block;
+  transition: filter 0.3s ease;
+
+  &:hover {
+    filter: brightness(0.7);
+  }
+}
+
+.orbit-wrap {
+  margin: 0;
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - 30px);
+  list-style: none;
+  animation: hoverEffect 5s infinite ease-in-out;
+
+  > li {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    &:hover {
+      ul {
+        border-width: 3px;
+        border-color: #fff;
+      }
+    }
+  }
+}
+  
+ul[class^=ring] {
+  @extend %ring;
+  transition: all 300ms ease-in-out;
+  li {
+    @extend %orbiting-object;
+    transition: all 300ms ease-in-out;
+  }
+}
+
+@mixin orbit-item($numItems, $numRing) {
+  @for $s from 1 through $numItems {  
+    $deg: 360deg / $numItems;
+    
+    .ring-#{$numRing} > *:nth-of-type(#{$s}) {
+      transform: rotate($s * $deg) translate(15em - ($numRing * 4)) rotate(-$s * $deg);
+    }
+  }
+}
+
+@for $i from 0 through $lastRing {  
+  .ring-#{$i} {
+    width: 30em - ($i * 8);
+    height: 30em - ($i * 8);
+    animation: clockwiseRotate 35s - ($i * 5) linear infinite;
+  
+    img {
+      animation: counterClockwiseRotate 35s - ($i * 5) linear infinite;
+    }
+  }
+  
+  @include orbit-item(map-get($ringMap, ring-#{$i}), $i);
+}
+
+%ring {
+  border: solid 2px #cc66ff;
+  position: relative;
+  padding: 0;
+  border-radius: 50%;
+  list-style: none;
+  box-sizing: content-box;
+}
+
+%orbiting-object {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: $orbitItemSize;
+  height: $orbitItemSize;
+  margin: -$orbitItemSize / 2;
+}
+
+.orbit-center {
+  z-index: 5;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  &:hover .orbit-center__icon {
+    transform: rotateZ(0deg);
+  }
+}
+
+.orbit-center__icon {
+  transform: rotateZ(-360deg);
+  transition: all 300ms ease-in-out;
+}
+
+//about section
+#about-section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
 }
 
 #about-title {
@@ -82,128 +225,6 @@ html, body {
   font-weight: 700;
   font-style: normal;
 }
-
-#webpage-title {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, 0);
-  font-size: 5em;
-  color: white;
-  font-family: 'refrigerator-deluxe', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: .2em;
-  line-height: 1.1em;
-  font-weight: 700;
-  font-style: normal;
-}
-  
-  .orbit-icon {
-    width: $orbitItemSize;
-    height: $orbitItemSize;
-    line-height: $orbitItemSize;
-    font-size: 1.4em;
-    text-align: center;
-    display: block;
-    transition: filter 0.3s ease;
-
-    &:hover {
-      filter: brightness(0.7);
-    }
-  }
-  
-  .orbit-wrap {
-    margin: 0;
-    position: relative;
-    width: 100vw;
-    height: calc(100vh - 30px);
-    list-style: none;
-    animation: hoverEffect 5s infinite ease-in-out;
-
-    > li {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-
-      &:hover {
-        ul {
-          border-width: 3px;
-          border-color: #fff;
-        }
-      }
-    }
-  }
-  
-  ul[class^=ring] {
-    @extend %ring;
-    transition: all 300ms ease-in-out;
-    li {
-      @extend %orbiting-object;
-      transition: all 300ms ease-in-out;
-    }
-  }
-  
-  @mixin orbit-item($numItems, $numRing) {
-    @for $s from 1 through $numItems {  
-      $deg: 360deg / $numItems;
-      
-      .ring-#{$numRing} > *:nth-of-type(#{$s}) {
-        transform: rotate($s * $deg) translate(15em - ($numRing * 4)) rotate(-$s * $deg);
-      }
-    }
-  }
-  
-  @for $i from 0 through $lastRing {  
-    .ring-#{$i} {
-      width: 30em - ($i * 8);
-      height: 30em - ($i * 8);
-      animation: clockwiseRotate 35s - ($i * 5) linear infinite;
-    
-      img {
-        animation: counterClockwiseRotate 35s - ($i * 5) linear infinite;
-      }
-    }
-    
-    @include orbit-item(map-get($ringMap, ring-#{$i}), $i);
-  }
-  
-  %ring {
-    border: solid 2px #cc66ff;
-    position: relative;
-    padding: 0;
-    border-radius: 50%;
-    list-style: none;
-    box-sizing: content-box;
-  }
-  
-  %orbiting-object {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: $orbitItemSize;
-    height: $orbitItemSize;
-    margin: -$orbitItemSize / 2;
-  }
-
-  .orbit-center {
-    z-index: 5;
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
-    &:hover .orbit-center__icon {
-      transform: rotateZ(0deg);
-    }
-  }
-  
-  .orbit-center__icon {
-    transform: rotateZ(-360deg);
-    transition: all 300ms ease-in-out;
-  }
   
 @keyframes clockwiseRotate {
     from {
