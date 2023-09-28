@@ -22,17 +22,32 @@ html, body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: calc(100vw - 5px);
+  width: 100vw;
   height: 100vh;
   position: relative;
 }
 
-#home-title {
+#sub-home-title {
   position: absolute;
-  top: 10%;
+  top: 19%;
   left: 50%;
   transform: translate(-50%, 0);
-  font-size: 5em;
+  font-size: 1.5em;
+  color: white;
+  font-family: "refrigerator-deluxe", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  line-height: 1.1em;
+  font-weight: 700;
+  font-style: normal;
+}
+
+#home-title {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 6em;
   color: white;
   font-family: "refrigerator-deluxe", sans-serif;
   text-transform: uppercase;
@@ -44,27 +59,27 @@ html, body {
 
 .nav-buttons {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 2%;
+  right: 1%;
   z-index: 100;
   display: flex;
   justify-content: flex-end;
 }
 .nav-buttons .nav-link {
   font-family: "refrigerator-deluxe", sans-serif;
-  font-size: 2.5em;
+  font-size: 1.5em;
   color: #fff;
   top: 10%;
   margin: 0 10px;
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.2em;
   font-style: normal;
   font-weight: 500;
   cursor: pointer;
 }
 .nav-buttons .nav-link:hover {
-  color: #cc66ff;
+  color: #cc00cc;
 }
 
 #social-section {
@@ -104,6 +119,7 @@ html, body {
 .orbit-wrap {
   margin: 0;
   position: relative;
+  top: 100%;
   width: 100vw;
   height: calc(100vh - 30px);
   list-style: none;
@@ -190,7 +206,7 @@ ul[class^=ring] li {
 }
 
 ul[class^=ring] {
-  border: solid 2px #cc66ff;
+  border: solid 2px #cc00cc;
   position: relative;
   padding: 0;
   border-radius: 50%;
