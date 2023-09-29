@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
       let isGlitching = false;
     
       function randomChar() {
-        const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%^&*()";
+        const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()_-[]{}/?+=!$";
         return chars[Math.floor(Math.random() * chars.length)];
       }
     
@@ -42,10 +42,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 100); // how long the glitch text appears for
       }
     
-      setInterval(glitchText, 1500); // how often the glitch text appears
+      setInterval(glitchText, 3000); // how often the glitch text appears
     });
   }
 
   //pass any number of text elements as an array
-  applyGlitchEffect(["home-title", "social-title", "about-title"]);
+  applyGlitchEffect(["home-title", "social-title", "about-title", "about-content"]);
 });
