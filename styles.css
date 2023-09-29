@@ -30,7 +30,7 @@ html, body {
 #sub-home-title {
   position: absolute;
   white-space: nowrap;
-  top: 22%;
+  top: 29%;
   left: 50%;
   transform: translate(-50%, 0);
   font-size: 1.5em;
@@ -46,10 +46,10 @@ html, body {
 #home-title {
   position: absolute;
   white-space: nowrap;
-  top: 20%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, 0);
-  font-size: 6em;
+  font-size: 8em;
   color: white;
   font-family: "refrigerator-deluxe", sans-serif;
   text-transform: uppercase;
@@ -61,11 +61,10 @@ html, body {
 
 .nav-buttons {
   background-color: rgba(0, 0, 0, 0.8);
-  padding: 10px;
-  border-radius: 5px;
-  position: absolute;
+  padding: 20px;
+  border-radius: 0px;
+  position: fixed;
   width: 100%;
-  top: 2%;
   left: 0;
   z-index: 5;
   display: flex;
@@ -76,11 +75,10 @@ html, body {
   font-family: "refrigerator-deluxe", sans-serif;
   font-size: 1.5em;
   color: #fff;
-  top: 10%;
   margin: 0 10px;
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
   font-style: normal;
   font-weight: 500;
   cursor: pointer;
@@ -90,6 +88,10 @@ html, body {
 }
 
 #social-section {
+  background-image: url("elements/wallhaven-x115ml.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
   width: 100%;
   height: 100vh;
@@ -100,8 +102,24 @@ html, body {
   top: 10%;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 3em;
+  font-size: 5em;
   color: white;
+  font-family: "refrigerator-deluxe", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  line-height: 1.1em;
+  font-weight: 700;
+  font-style: normal;
+}
+
+#sub-social-title {
+  position: absolute;
+  white-space: nowrap;
+  top: 18%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 1em;
+  color: #ff66ff;
   font-family: "refrigerator-deluxe", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -259,13 +277,29 @@ ul[class^=ring] li {
   top: 10%;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 3em;
+  font-size: 5em;
   color: white;
   font-family: "refrigerator-deluxe", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   line-height: 1.1em;
   font-weight: 700;
+  font-style: normal;
+}
+
+#about-content {
+  position: absolute;
+  text-align: center;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5em;
+  color: white;
+  font-family: "refrigerator-deluxe", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 1.1em;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -293,38 +327,6 @@ ul[class^=ring] li {
     transform: translateY(-30px);
   }
 }
-@keyframes glitch {
-  0% {
-    text-shadow: none;
-  }
-  10% {
-    text-shadow: 2px 0 #ff9999, -2px 0 #00ff80;
-  }
-  20% {
-    text-shadow: none;
-  }
-  20% {
-    text-shadow: 2px 0 #ffff99, -2px 0 #00aaff;
-  }
-  40% {
-    text-shadow: none;
-  }
-  50% {
-    text-shadow: 2px 0 #00ff80, -2px 0 #ff66ff;
-  }
-  60% {
-    text-shadow: none;
-  }
-  70% {
-    text-shadow: 2px 0 #00aaff, -2px 0 #ff9999;
-  }
-  80% {
-    text-shadow: none;
-  }
-  90% {
-    text-shadow: 2px 0 #ff66ff, -2px 0 #ffff99;
-  }
-  100% {
-    text-shadow: none;
-  }
+footer {
+  text-align: center;
 }/*# sourceMappingURL=styles.css.map */
