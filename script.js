@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
   navLinks.forEach(link => {
     link.addEventListener('click', function(event) {
       event.preventDefault();
-      const sectionId = this.getAttribute('data-section');
+      const sectionId = this.getAttribute('href').substring(1);
       const sectionElement = document.getElementById(sectionId);
 
       window.scrollTo({
