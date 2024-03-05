@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
+  document.body.addEventListener('click', function(e) {
+    if (e.target && e.target.classList.contains('orbit-icon')) {
+      e.preventDefault();
+    }
+  });
   const navLinks = document.querySelectorAll('.nav-link');
 
   navLinks.forEach(link => {
