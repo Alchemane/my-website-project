@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
       let isGlitching = false;
     
       function randomChar() {
-        const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()_-[]{}/?+=!$";
+        const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()_-[]{}/?+=!$~";
         return chars[Math.floor(Math.random() * chars.length)];
       }
     
