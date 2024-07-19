@@ -2,13 +2,10 @@
   box-sizing: border-box;
 }
 
-body {
+body, html {
   font-family: Arial, sans-serif;
   background-color: #0d0d0d;
   color: #fff;
-}
-
-html, body {
   margin: 0;
   padding: 0;
 }
@@ -17,8 +14,8 @@ html, body {
   font-family: "refrigerator-deluxe";
   src: url("fonts/Refrigerator Deluxe.otf") format("truetype");
 }
-#home-section {
-  background-image: url("elements/169383.jpg");
+
+#home-section, #social-section {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -27,86 +24,116 @@ html, body {
   position: relative;
 }
 
-.home-title-container {
+#background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+}
+
+#social-section {
+  background-image: url("elements/wallhaven-x115ml.jpg");
+}
+
+.home-title-container, .social-title-container, .about-title-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.home-title-container {
   height: 75vh;
 }
 
-#home-title, #sub-home-title, #social-title, #sub-social-title, #about-title, #about-sub-title {
+.social-title-container, .about-title-container {
+  height: 25vh;
+}
+
+#home-title, #sub-home-title, #social-title, #sub-social-title, #about-title, #sub-about-title, .nav-buttons .nav-link, #about-content {
   white-space: nowrap;
   font-family: "refrigerator-deluxe", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-weight: 700;
   font-style: normal;
+  z-index: 1;
+  margin: 0;
 }
 
 #sub-home-title, #sub-social-title, #sub-about-title {
   font-size: 1.5em;
+  min-height: 1.5em;
   color: #ff66ff;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: .15em solid #ff66ff;
+  display: inline-block;
+  animation: blink-caret .75s step-end infinite;
 }
 
 #home-title {
-  font-size: 8em;
+  font-size: 9em;
   color: white;
-  margin-bottom: 0px;
+  margin-bottom: 0;
+}
+
+#social-title, #about-title {
+  font-size: 5em;
+  color: white;
+  margin-bottom: 0;
+}
+
+.gradient-section::after,
+.gradient-section::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  z-index: 0;
+}
+
+.gradient-section::after {
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+}
+
+.gradient-section::before {
+  top: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent);
 }
 
 .nav-buttons {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 20px;
-  border-radius: 0px;
   position: fixed;
   width: 100%;
   left: 0;
   z-index: 5;
   display: flex;
   justify-content: flex-end;
-  float: right;
 }
+
 .nav-buttons .nav-link {
-  font-family: "refrigerator-deluxe", sans-serif;
   font-size: 1.5em;
   color: #fff;
   margin: 0 10px;
   text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-style: normal;
-  font-weight: 700;
   cursor: pointer;
 }
+
 .nav-buttons .nav-link:hover {
   color: #ff66ff;
-}
-
-#social-section {
-  background-image: url("elements/wallhaven-x115ml.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  width: 100%;
-  height: 100vh;
-}
-
-.social-title-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 25vh;
-}
-
-#social-title, #about-title {
-  font-size: 5em;
-  color: white;
-  margin-bottom: 0px;
 }
 
 .orbit-icon {
@@ -118,6 +145,7 @@ html, body {
   display: block;
   transition: filter 0.3s ease;
 }
+
 .orbit-icon:hover {
   filter: brightness(0.5);
 }
@@ -125,62 +153,78 @@ html, body {
 .orbit-wrap {
   margin: 0;
   position: relative;
-  top: 0%;
   width: 100%;
   height: 65vh;
   list-style: none;
   animation: hoverEffect 7s infinite ease-in-out;
+  z-index: 1;
 }
+
 .orbit-wrap > li {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
 .orbit-wrap > li:hover ul {
   border-width: 3px;
   border-color: #cc00cc;
 }
 
 ul[class^=ring] {
+  border-radius: 50%;
+  position: relative;
+  padding: 0;
+  list-style: none;
+  box-sizing: content-box;
   transition: all 300ms ease-in-out;
 }
+
 ul[class^=ring] li {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1.6em;
+  height: 1.6em;
+  margin: -0.8em;
   transition: all 300ms ease-in-out;
 }
 
 .ring-0 {
-  border: solid 3px #5393D1;
+  border: solid 3px #345ec6;
   width: 30em;
   height: 30em;
   animation: clockwiseRotate 35s linear infinite;
 }
+
 .ring-0 img {
   animation: counterClockwiseRotate 35s linear infinite;
 }
 
 .ring-0 > *:nth-of-type(1) {
-  transform: rotate(51.4285714286deg) translate(15em) rotate(-51.4285714286deg);
+  transform: rotate(51.43deg) translate(15em) rotate(-51.43deg);
 }
 
 .ring-0 > *:nth-of-type(2) {
-  transform: rotate(102.8571428571deg) translate(15em) rotate(-102.8571428571deg);
+  transform: rotate(102.86deg) translate(15em) rotate(-102.86deg);
 }
 
 .ring-0 > *:nth-of-type(3) {
-  transform: rotate(154.2857142857deg) translate(15em) rotate(-154.2857142857deg);
+  transform: rotate(154.29deg) translate(15em) rotate(-154.29deg);
 }
 
 .ring-0 > *:nth-of-type(4) {
-  transform: rotate(205.7142857143deg) translate(15em) rotate(-205.7142857143deg);
+  transform: rotate(205.71deg) translate(15em) rotate(-205.71deg);
 }
 
 .ring-0 > *:nth-of-type(5) {
-  transform: rotate(257.1428571429deg) translate(15em) rotate(-257.1428571429deg);
+  transform: rotate(257.14deg) translate(15em) rotate(-257.14deg);
 }
 
 .ring-0 > *:nth-of-type(6) {
-  transform: rotate(308.5714285714deg) translate(15em) rotate(-308.5714285714deg);
+  transform: rotate(308.57deg) translate(15em) rotate(-308.57deg);
 }
 
 .ring-0 > *:nth-of-type(7) {
@@ -188,11 +232,12 @@ ul[class^=ring] li {
 }
 
 .ring-1 {
-  border: solid 2px #89B3D9;
+  border: solid 3px #818dc9;
   width: 22em;
   height: 22em;
   animation: clockwiseRotate 30s linear infinite;
 }
+
 .ring-1 img {
   animation: counterClockwiseRotate 30s linear infinite;
 }
@@ -213,24 +258,6 @@ ul[class^=ring] li {
   transform: rotate(360deg) translate(11em) rotate(-360deg);
 }
 
-ul[class^=ring] {
-  position: relative;
-  padding: 0;
-  border-radius: 50%;
-  list-style: none;
-  box-sizing: content-box;
-}
-
-ul[class^=ring] li {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 1.6em;
-  height: 1.6em;
-  margin: -0.8em;
-}
-
 .orbit-center {
   z-index: 5;
   text-align: center;
@@ -239,6 +266,7 @@ ul[class^=ring] li {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .orbit-center:hover .orbit-center__icon {
   transform: rotateZ(0deg);
 }
@@ -258,29 +286,16 @@ ul[class^=ring] li {
   align-items: center;
 }
 
-.about-title-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 25vh;
-}
-
 #about-content {
   text-align: center;
-  width: 75vw;
-  margin: auto;
   font-size: 1.5em;
-  color: white;
-  font-family: "refrigerator-deluxe", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  line-height: 1.1em;
-  font-weight: 400;
+  width: 75vw;
+  letter-spacing: 0.2em;
+  font-weight: 700;
   font-style: normal;
-  white-space: normal;
-  overflow: hidden;
-  margin-top: 10px;
+  z-index: 1;
+  white-space: pre-wrap;
+  margin: 0;
 }
 
 @keyframes clockwiseRotate {
@@ -291,6 +306,7 @@ ul[class^=ring] li {
     transform: rotate(360deg);
   }
 }
+
 @keyframes counterClockwiseRotate {
   0% {
     transform: rotate(0deg);
@@ -299,6 +315,7 @@ ul[class^=ring] li {
     transform: rotate(-360deg);
   }
 }
+
 @keyframes hoverEffect {
   0%, 100% {
     transform: translateY(0%);
@@ -307,9 +324,19 @@ ul[class^=ring] li {
     transform: translateY(-30px);
   }
 }
+
+@keyframes blink-caret {
+  from, to { 
+    border-color: transparent; 
+  }
+  50% { 
+    border-color: #ff66ff; 
+  }
+}
+
 footer {
   text-align: center;
   padding: 5px;
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
-}/*# sourceMappingURL=styles.css.map */
+}
